@@ -22,7 +22,7 @@ function read_config_file(): ConfigType | null {
 		return null;
 	}
 	const file = readFileSync(path, "utf8");
-	return JSON.parse(file);
+	return JSON.parse(file) as ConfigType;
 }
 
 const config = read_config_file();
